@@ -1,16 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>INICIO DE SESION</title>
 </head>
 <body>
-	<div class="form">
-		<label>Usuario:</label><input type="text" name="usuario"/>
-		<label>Clave</label><input type="password" name="clave"/>
-		<input type="submit" value="login">
-	</div>
+	<center><h1>BIENVENIDO</h1></center>
+	<center><div class="form">
+		<label>Usuario:</label><br><input type="text" name="usuario"/><br><br>
+		<label>Clave</label><br><input type="password" name="clave"/><br><br>
+		
+		<form:form action="${pageContext.request.contextPath}/ListaSucursales" method="POST">
+			<input type="submit" value="ENTRAR">
+		</form:form>
+		
+	
+	</div></center>
 </body>
 </html>
