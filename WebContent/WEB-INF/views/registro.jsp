@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Registro</title>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 	<center><h1>INGRESE UNA NUEVA SUCURSAL</h1></center>
@@ -26,6 +28,16 @@
 	
 	<input type="submit" value="GUARDAR">
 	</form:form>
+	
+	<c:choose>
+			<c:when test="${respuesta==1}">
+				<script>
+					swal("Se añadió con exito", {
+			 	    	icon: "success",
+	 		   		});
+				</script>
+			</c:when>
+		</c:choose>
 	
 </body>
 </html>

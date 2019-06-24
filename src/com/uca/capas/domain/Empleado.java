@@ -36,7 +36,7 @@ public class Empleado {
 	//   @ManyToOne es la relacion de muchos a uno
 	//   @JoinColumn se relaciona a ManyToOne
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_sucursal")
+	@JoinColumn(name = "fk_sucursal")
 	private Sucursal sucursal;
 	
 	public Empleado() {}

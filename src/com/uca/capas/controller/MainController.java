@@ -61,8 +61,8 @@ public class MainController {
 			mav.setViewName("registro");
 		}
 		else {
-		
 		SucursalS.guardar(s);
+		mav.addObject("respuesta",1);
 		mav.setViewName("registro");
 		
 		}

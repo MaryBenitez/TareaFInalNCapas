@@ -22,6 +22,7 @@
 			<th>Nombre</th>
 			<th>Ubicacion</th>
 			<th>Horarios</th>
+			<th>Numero de Mesas</th>
 			<th>Gerente</th>
 		</tr>
 		<!-- OBTIENE LA LISTA -->
@@ -30,6 +31,7 @@
 			<td>${sucursal.nombre}</td>
 			<td>${sucursal.ubicacion}</td>
 			<td>${sucursal.horario}</td>
+			<td>${sucursal.nmesas}</td>
 			<td>${sucursal.nomgerente}</td>
 			
 			<td><form action="">
