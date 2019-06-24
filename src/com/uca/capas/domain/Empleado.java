@@ -19,13 +19,13 @@ public class Empleado {
 	@GeneratedValue(generator = "empleado_id_empleado_seq", strategy = GenerationType.AUTO)
 	@SequenceGenerator(name = "empleado_id_empleado_seq", sequenceName = "empleado_id_empleado_seq", allocationSize = 1)
 	@Column(name = "id_empleado")
-	private int id_empleado;
+	private Integer id_empleado;
 	
 	@Column(name = "nombre")
 	private String nombre;
 	
 	@Column(name = "edad")
-	private int edad;
+	private Integer edad;
 	
 	@Column(name = "genero")
 	private String genero;
@@ -41,7 +41,7 @@ public class Empleado {
 	
 	public Empleado() {}
 
-	public Empleado(int id_empleado, String nombre, int edad, String genero, boolean estado, Sucursal sucursal) {
+	public Empleado(Integer id_empleado, String nombre, Integer edad, String genero, boolean estado, Sucursal sucursal) {
 		super();
 		this.id_empleado = id_empleado;
 		this.nombre = nombre;
@@ -51,11 +51,11 @@ public class Empleado {
 		this.sucursal = sucursal;
 	}
 
-	public int getId_empleado() {
+	public Integer getId_empleado() {
 		return id_empleado;
 	}
 
-	public void setId_empleado(int id_empleado) {
+	public void setId_empleado(Integer id_empleado) {
 		this.id_empleado = id_empleado;
 	}
 
@@ -67,11 +67,11 @@ public class Empleado {
 		this.nombre = nombre;
 	}
 
-	public int getEdad() {
+	public Integer getEdad() {
 		return edad;
 	}
 
-	public void setEdad(int edad) {
+	public void setEdad(Integer edad) {
 		this.edad = edad;
 	}
 

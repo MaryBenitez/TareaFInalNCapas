@@ -20,7 +20,8 @@ public class Sucursal {
 	@Id
 	@GeneratedValue(generator = "sucursal_id_sucursal_seq", strategy = GenerationType.AUTO)
 	@SequenceGenerator(name = "sucursal_id_sucursal_seq", sequenceName = "sucursal_id_sucursal_seq", allocationSize = 1)
-	private int id_sucursal;
+	@Column(name = "id_sucursal")
+	private Integer id_sucursal;
 	
 	@Column(name = "nombre")
 	private String nombre;
@@ -32,7 +33,7 @@ public class Sucursal {
 	private String horario;
 	
 	@Column(name = "nmesas")
-	private int nmesas;
+	private Integer nmesas;
 	
 	@Column(name = "nomgerente")
 	private String nomgerente;
@@ -41,12 +42,13 @@ public class Sucursal {
 	//  fetch es repoio y el cascade es para borrar una sucursal y que se borren los empleados de la misma
 	@OneToMany(mappedBy = "sucursal", fetch = FetchType.LAZY, cascade=CascadeType.ALL)
 	private List<Empleado> empleado;
+	
 
-	public int getId_sucursal() {
+	public Integer getId_sucursal() {
 		return id_sucursal;
 	}
 
-	public void setId_sucursal(int id_sucursal) {
+	public void setId_sucursal(Integer id_sucursal) {
 		this.id_sucursal = id_sucursal;
 	}
 
@@ -74,11 +76,11 @@ public class Sucursal {
 		this.horario = horario;
 	}
 
-	public int getNmesas() {
+	public Integer getNmesas() {
 		return nmesas;
 	}
 
-	public void setNmesas(int nmesas) {
+	public void setNmesas(Integer nmesas) {
 		this.nmesas = nmesas;
 	}
 

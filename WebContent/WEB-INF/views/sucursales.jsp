@@ -9,7 +9,25 @@
 </head>
 <body>
 
-	<h1>LISTA DE SUCURSALES</h1>
+	<center><h1>LISTA DE SUCURSALES</h1></center>
+	
+		<form action="${pageContext.request.contextPath}/Registro" method="post">
+			<input type="submit" value="REGRISTRAR SUCURSAL">
+		</form>
+		<br>
+		<form action="">
+			<input type="submit" value="VER PERFIL">
+		</form>
+		<br>
+		<form action="">
+			<input type="submit" value="EDITAR SUCURSAL">
+		</form>
+		<br>
+		<form action="">
+			<input type="submit" value="ELIMINAR SUCURSAL">
+		</form>
+	
+	<br><br>
 	
 	<table>
 		<tr>

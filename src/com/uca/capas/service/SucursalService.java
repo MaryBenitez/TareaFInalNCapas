@@ -8,5 +8,6 @@ import com.uca.capas.domain.Sucursal;
 public interface SucursalService {
 	
 	public List<Sucursal> findAll();
+	public Sucursal guardar(Sucursal sucursal);
 
 }
