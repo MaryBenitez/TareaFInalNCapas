@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.uca.capas.domain.Usuario;
 import com.uca.capas.domain.Sucursal;
+import com.uca.capas.service.EmpleadoService;
 import com.uca.capas.service.SucursalService;
 
 @Controller
@@ -89,5 +90,15 @@ public class MainController {
 		mav.setViewName("sucursales");
 		return mav; 
 	}
+	
+	@RequestMapping(value ="/perfil", method = RequestMethod.GET)
+	public ModelAndView perfil(){
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("sucursal",SucursalS.findAll());
+		mav.setViewName("perfil");
+		return mav;
+		
+	}
+	
 	
 }

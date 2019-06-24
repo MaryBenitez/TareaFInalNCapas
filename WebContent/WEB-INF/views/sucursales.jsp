@@ -20,20 +20,16 @@
 	<table>
 		<tr>
 			<th>Nombre</th>
-			<th>Ubicacion</th>
-			<th>Horarios</th>
-			<th>Numero de Mesas</th>
-			<th>Gerente</th>
 		</tr>
 		<!-- OBTIENE LA LISTA -->
 		<c:forEach items="${sucursal}" var="sucursal">
 		<tr>
 			<td>${sucursal.nombre}</td>
-			<td>${sucursal.ubicacion}</td>
-			<td>${sucursal.horario}</td>
-			<td>${sucursal.nmesas}</td>
-			<td>${sucursal.nomgerente}</td>
 		
+			<td><form action="${pageContext.request.contextPath}/perfil" method="GET">
+			<input type="hidden" name="perfil" value="${sucursal.id_sucursal}"/>
+			<input type="submit" value="VER PERFIL">
+			</form></td>
 			
 			<td><form action="${pageContext.request.contextPath}/Editar" method="post">
 			<input type="hidden" name="editar" value="${sucursal.id_sucursal}"/>
@@ -42,7 +38,7 @@
 			
 			<td><form action="${pageContext.request.contextPath}/Delete" method="post">
 			<input type="hidden" name="code" value="${sucursal.id_sucursal}"/>
-			<input type="submit" value="ELIMINAR SUCURSAL SUCURSAL">
+			<input type="submit" value="ELIMINAR SUCURSAL">
 			</form></td>
 			
 		</tr>
