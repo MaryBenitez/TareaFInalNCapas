@@ -79,14 +79,14 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/Delete",method=RequestMethod.POST)
-	public ModelAndView delete(@RequestParam(value="code") Integer code) {
+	public ModelAndView delete(@RequestParam(value="code") Integer id_sucursal) {
 		ModelAndView mav = new ModelAndView();
 		List<Sucursal> sucursales = null;
-		SucursalS.delete(code);
+		SucursalS.borrar(id_sucursal);
 		sucursales = SucursalS.findAll();
-		mav.addObject("code", code);
+		mav.addObject("id_sucursal", id_sucursal);
 		mav.addObject("sucursal",sucursales);
-		mav.setViewName("registro");
+		mav.setViewName("sucursales");
 		return mav; 
 	}
 	

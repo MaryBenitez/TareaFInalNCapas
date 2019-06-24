@@ -34,9 +34,9 @@ public class SucursalServiceImpl implements SucursalService{
 	}
 
 	@Override
-	public void delete(Integer id) {
+	public void borrar(Integer id) {
 		// TODO Auto-generated method stub
-		
+		SucursalR.deleteById(id);;
 	}
 
 	

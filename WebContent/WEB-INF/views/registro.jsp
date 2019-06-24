@@ -13,7 +13,7 @@
 	<center><h1>INGRESE UNA NUEVA SUCURSAL</h1></center>
 
 	<form:form action="${pageContext.request.contextPath}/Guardar" method="post" modelAttribute="sucursal">
-	<form:input type="hidden" value="${sucursal.id_sucursal}" path="id_sucursal"/>
+	<form:input type="hidden" path="id_sucursal" value="${sucursal.id_sucursal}" />
 	<label>Nombre: </label>
 	<form:input type="text" value="${sucursal.nombre}" path="nombre"/><br><br>
 	<label>Ubicacion: </label>
