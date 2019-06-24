@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.uca.capas.domain.Usuario;
@@ -65,6 +66,15 @@ public class MainController {
 		mav.setViewName("registro");
 		
 		}
+		return mav;
+	}
+	
+	@RequestMapping("/Editar")
+	public ModelAndView editarSucursal(@RequestParam("editar") Integer id_sucursal){
+		ModelAndView mav = new ModelAndView();
+		Sucursal sucursal = SucursalS.findOne(id_sucursal);
+		mav.addObject("sucursal", sucursal);
+		mav.setViewName("registro");
 		return mav;
 	}
 	

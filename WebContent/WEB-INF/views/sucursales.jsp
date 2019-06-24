@@ -15,19 +15,7 @@
 			<input type="submit" value="REGRISTRAR SUCURSAL">
 		</form>
 		<br>
-		<form action="">
-			<input type="submit" value="VER PERFIL">
-		</form>
-		<br>
-		<form action="">
-			<input type="submit" value="EDITAR SUCURSAL">
-		</form>
-		<br>
-		<form action="">
-			<input type="submit" value="ELIMINAR SUCURSAL">
-		</form>
-	
-	<br><br>
+		
 	
 	<table>
 		<tr>
@@ -43,6 +31,20 @@
 			<td>${sucursal.ubicacion}</td>
 			<td>${sucursal.horario}</td>
 			<td>${sucursal.nomgerente}</td>
+			
+			<td><form action="">
+			<input type="submit" value="VER PERFIL">
+			</form></td>
+			
+			<td><form action="${pageContext.request.contextPath}/Editar" method="post">
+			<input type="hidden" name="editar" value="${sucursal.id_sucursal}"/>
+			<input type="submit" value="EDITAR SUCURSAL">
+			</form></td>
+			
+			<td><form >
+			<input type="submit" value="ELIMINAR SUCURSAL">
+			</form></td>
+			
 		</tr>
 		</c:forEach>
 	</table>

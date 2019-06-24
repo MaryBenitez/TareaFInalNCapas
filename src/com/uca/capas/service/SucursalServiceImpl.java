@@ -26,6 +26,12 @@ public class SucursalServiceImpl implements SucursalService{
 		// TODO Auto-generated method stub
 		return SucursalR.save(sucursal);
 	}
+
+	@Override
+	public Sucursal findOne(Integer id) {
+		// TODO Auto-generated method stub
+		return SucursalR.findById(id).get();
+	}
 	
 	
 }
