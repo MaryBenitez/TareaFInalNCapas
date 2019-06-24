@@ -32,6 +32,12 @@ public class SucursalServiceImpl implements SucursalService{
 		// TODO Auto-generated method stub
 		return SucursalR.findById(id).get();
 	}
-	
+
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }

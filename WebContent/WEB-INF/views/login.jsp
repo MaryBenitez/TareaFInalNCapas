@@ -14,7 +14,7 @@
 		<label>Usuario:</label><br><input type="email" name="usuario"/><br><br>
 		<label>Clave</label><br><input type="password" name="clave"/><br><br>
 		
-		<form action="${pageContext.request.contextPath}/ListaSucursales">
+		<form action="${pageContext.request.contextPath}/ListaSucursales" method="post">
 			<input type="submit" value="ENTRAR">
 		</form>
 		

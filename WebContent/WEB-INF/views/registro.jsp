@@ -13,10 +13,9 @@
 	<center><h1>INGRESE UNA NUEVA SUCURSAL</h1></center>
 
 	<form:form action="${pageContext.request.contextPath}/Guardar" method="post" modelAttribute="sucursal">
+	<form:input type="hidden" value="${sucursal.id_sucursal}" path="id_sucursal"/>
 	<label>Nombre: </label>
 	<form:input type="text" value="${sucursal.nombre}" path="nombre"/><br><br>
-	<form:input type="hidden" value="${sucursal.id_sucursal}" path="id_sucursal"/>
-	
 	<label>Ubicacion: </label>
 	<form:input type="text" value="${sucursal.ubicacion}" path="ubicacion"/><br><br>
 	<label>Horarios: </label>
@@ -27,7 +26,6 @@
 	<form:input type="text" value="${sucursal.nomgerente}" path="nomgerente"/><br><br>
 	
 	<input type="submit" value="GUARDAR">
-	</form:form>
 	
 	<c:choose>
 			<c:when test="${respuesta==1}">
@@ -38,6 +36,10 @@
 				</script>
 			</c:when>
 		</c:choose>
+	
+	</form:form>
+	
+	
 	
 </body>
 </html>
