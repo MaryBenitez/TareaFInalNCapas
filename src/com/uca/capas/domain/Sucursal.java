@@ -28,7 +28,7 @@ public class Sucursal {
 	@Column(name = "ubicacion")
 	private String ubicacion;
 	
-	@Column(name = "horario")
+	@Column(name = "horarios")
 	private String horario;
 	
 	@Column(name = "nmesas")
@@ -41,5 +41,63 @@ public class Sucursal {
 	//  fetch es repoio y el cascade es para borrar una sucursal y que se borren los empleados de la misma
 	@OneToMany(mappedBy = "sucursal", fetch = FetchType.LAZY, cascade=CascadeType.ALL)
 	private List<Empleado> empleado;
+
+	public int getId_sucursal() {
+		return id_sucursal;
+	}
+
+	public void setId_sucursal(int id_sucursal) {
+		this.id_sucursal = id_sucursal;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getUbicacion() {
+		return ubicacion;
+	}
+
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+
+	public String getHorario() {
+		return horario;
+	}
+
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+
+	public int getNmesas() {
+		return nmesas;
+	}
+
+	public void setNmesas(int nmesas) {
+		this.nmesas = nmesas;
+	}
+
+	public String getNomgerente() {
+		return nomgerente;
+	}
+
+	public void setNomgerente(String nomgerente) {
+		this.nomgerente = nomgerente;
+	}
+
+	public List<Empleado> getEmpleado() {
+		return empleado;
+	}
+
+	public void setEmpleado(List<Empleado> empleado) {
+		this.empleado = empleado;
+	}
+	
+	
 	
 }

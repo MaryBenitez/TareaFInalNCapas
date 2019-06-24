@@ -7,6 +7,6 @@ import com.uca.capas.domain.Sucursal;
 
 public interface SucursalService {
 	
-	public List<Sucursal> findAll() throws DataAccessException;
+	public List<Sucursal> findAll();
 
 }

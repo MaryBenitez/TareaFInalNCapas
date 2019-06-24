@@ -11,10 +11,10 @@
 <body>
 	<center><h1>BIENVENIDO</h1></center>
 	<center><div class="form">
-		<label>Usuario:</label><br><input type="text" name="usuario"/><br><br>
+		<label>Usuario:</label><br><input type="email" name="usuario"/><br><br>
 		<label>Clave</label><br><input type="password" name="clave"/><br><br>
 		
-		<form:form action="${pageContext.request.contextPath}/ListaSucursales" method="POST">
+		<form:form action="${pageContext.request.contextPath}/ListaSucursales" method="post">
 			<input type="submit" value="ENTRAR">
 		</form:form>
 		

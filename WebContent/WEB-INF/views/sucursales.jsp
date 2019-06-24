@@ -24,7 +24,7 @@
 			<td>${sucursal.nombre}</td>
 			<td>${sucursal.ubicacion}</td>
 			<td>${sucursal.horario}</td>
-			<td>${sucursal.gerente}</td>
+			<td>${sucursal.nomgerente}</td>
 		</tr>
 		</c:forEach>
 	</table>

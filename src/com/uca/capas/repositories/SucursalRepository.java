@@ -11,5 +11,4 @@ public interface SucursalRepository extends JpaRepository<Sucursal, Integer> {
 	
 	
 	
-
 }

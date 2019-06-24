@@ -18,11 +18,8 @@ import com.uca.capas.service.SucursalService;
 @Controller
 public class MainController {
 	
-	//Objeto Logger
-	static Logger log = Logger.getLogger(MainController.class.getName());
-
 	@Autowired
-	SucursalService SucursalR;
+	SucursalService SucursalS;
 	
 	@RequestMapping("")
 	public ModelAndView initMain() {
@@ -35,28 +32,10 @@ public class MainController {
 		return mav;
 	}
 	
-	/*@RequestMapping("/ListaSucursales")
-	public ModelAndView ListaSucursales() {
-		ModelAndView mav = new ModelAndView();		
-		mav.addObject("sucursal",SucursalR.findAll());
-		mav.setViewName("sucursales");
-		
-		return mav;
-	}*/
-	
-	@RequestMapping(value="/ListaSucursales")
+	@RequestMapping(value = "/ListaSucursales", method = RequestMethod.POST)
 	public ModelAndView ListaSucursales(){
-		log.info("Entrando a funcion init-main " + log.getName());
 		ModelAndView mav = new ModelAndView();
-		List<Sucursal> sucursales = null;
-		try {
-		//Selecciono todos los elementos de la tabla sucursal
-			log.info("Termino de buscar en la base de datos");
-		}
-		catch(Exception e){
-			log.log(Level.SEVERE,"Exception Occur",e);
-		}
-		mav.addObject("sucursal",SucursalR.findAll());
+		mav.addObject("sucursal", SucursalS.findAll());
 		mav.setViewName("sucursales");
 		return mav;
 	}
